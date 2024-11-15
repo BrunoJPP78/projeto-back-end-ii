@@ -39,10 +39,10 @@ Gerencia as tarefas associadas aos usuários.
 - ```GET /tarefas/deleted/user/{usuarioId}```  
   Retorna as tarefas deletadas associadas a um usuário específico. **Status:** OK.
 
-- ```GET /tarefas/search-by-title?titulo={titulo}```  
+- ```GET /tarefas/pesquisar-titulo?titulo={titulo}```  
   Pesquisa tarefas pelo título. **Status:** OK.
 
-- ```GET /tarefas/search-by-date-range?startDate={startDate}&endDate={endDate}```  
+- ```GET /tarefas/pesquisar-data-range?startDate={startDate}&endDate={endDate}```  
   Pesquisa tarefas dentro de um intervalo de datas. **Status:** **VERIFICAR, pois está retornando apenas uma tarefa.**
 
 - ```POST /tarefas```  
