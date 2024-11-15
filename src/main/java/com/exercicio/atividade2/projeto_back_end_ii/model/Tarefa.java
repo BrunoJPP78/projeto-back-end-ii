@@ -7,8 +7,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -19,10 +23,19 @@ import java.time.LocalDate;
 @Document(collection = "tarefas")
 public class Tarefa {
 
+    @Id
     private String id;
+
+    @NotBlank(message = "O título não pode estar vazio.")
     private String titulo;
+
+    @NotBlank(message = "A descrição não pode estar vazia.")
     private String descricao;
+
+    @NotNull(message = "A data de criação é obrigatória.")
     private LocalDate dataCriacao;
+
+    @NotNull(message = "A prioridade deve ser informada.")
     Prioridade prioridade;
 
     @JsonIgnore
