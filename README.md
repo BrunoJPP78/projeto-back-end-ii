@@ -56,7 +56,6 @@ Gerencia as tarefas associadas aos usuários.
 ## Observações
 - O **SOFT delete** nas tarefas garante que os registros excluídos possam ser restaurados ou consultados no futuro.
 - **Correções pendentes:**
-  - Verificar o comportamento do endpoint de busca por intervalo de datas: ```GET /tarefas/search-by-date-range``` está retornando apenas uma tarefa.
-  - Resolver a atualização de usuários no endpoint ```POST /usuarios/{id}```.
+  - Verificar o comportamento do endpoint de busca por intervalo de datas: ```GET /tarefas/pesquisar-data-range``` está retornando apenas uma tarefa.
 
 Contribuições e feedbacks são bem-vindos!
