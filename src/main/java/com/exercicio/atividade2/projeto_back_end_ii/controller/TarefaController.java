@@ -53,12 +53,12 @@ public class TarefaController {
         return ResponseEntity.ok(tarefaService.findAllDeletedByUsuarioId(usuarioId));
     }
 
-    @GetMapping("/search-by-title")
+    @GetMapping("/pesquisar-titulo")
     public ResponseEntity<List<TarefaDto>> findByTitulo(@RequestParam String titulo) {
         return ResponseEntity.ok(tarefaService.findByTitulo(titulo));
     }
 
-    @GetMapping("/search-by-date-range")
+    @GetMapping("/pesquisar-data-range")
     public ResponseEntity<List<TarefaDto>> findByDataCriacaoBetween(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {

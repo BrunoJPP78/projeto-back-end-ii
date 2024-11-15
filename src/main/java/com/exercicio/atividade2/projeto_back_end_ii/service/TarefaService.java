@@ -20,7 +20,7 @@ public class TarefaService {
     private final TarefaRepository tarefaRepository;
 
     public Page<TarefaDto> findAll(Pageable pageable){
-        return tarefaRepository.findAll(pageable).map(TarefaDto::new);
+        return tarefaRepository.findByIsDeletedFalse(pageable).map(TarefaDto::new);
     }
 
     public TarefaDto findById(String id){
