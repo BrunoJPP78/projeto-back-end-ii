@@ -17,7 +17,7 @@ Gerencia as informações relacionadas aos usuários.
   Cadastra um novo usuário. **Status:** OK.
 
 - ```POST /usuarios/{id}```  
-  Atualiza as informações de um usuário existente. **Status:** Não está atualizando.
+  Atualiza as informações de um usuário existente. **Status:** OK.
 
 - ```DELETE /usuarios/{id}```  
   Remove um usuário pelo ID. **Status:** OK.
