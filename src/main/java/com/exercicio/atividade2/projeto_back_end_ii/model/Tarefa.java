@@ -29,8 +29,10 @@ public class Tarefa {
     @DBRef
     private Usuario usuario;
 
+    private boolean isDeleted = false;
+
     public static Tarefa fromDto(TarefaDto tarefaDto){
         return new Tarefa(null, tarefaDto.titulo(), tarefaDto.descricao(),
-                tarefaDto.dataCriacao(), tarefaDto.prioridade(), tarefaDto.usuario());
+                tarefaDto.dataCriacao(), tarefaDto.prioridade(), tarefaDto.usuario(), false);
     }
 }
